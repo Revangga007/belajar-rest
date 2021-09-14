@@ -23,9 +23,9 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
-$app->withFacades();
+$app->withFacades(); // untuk query builder
 
-$app->withEloquent();
+$app->withEloquent(); // untuk EloquentORM
 
 /*
 |--------------------------------------------------------------------------
