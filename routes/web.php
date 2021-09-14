@@ -2,6 +2,8 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
+// use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -13,6 +15,7 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+// $router->get('/', function () use ($router) {
+//     return $router->app->version();
+// });
+$router->post('/product/create', 'ProductController@store');
