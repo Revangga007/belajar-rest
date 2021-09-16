@@ -2,6 +2,8 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
+use App\Http\Controllers\ProductController;
+
 // use App\Http\Controllers\ProductController;
 
 /*
@@ -18,4 +20,12 @@
 // $router->get('/', function () use ($router) {
 //     return $router->app->version();
 // });
+
+$router->get('/product', 'ProductController@index');
 $router->post('/product/create', 'ProductController@store');
+$router->get('/product/{id}', 'ProductController@show');
+$router->put('/product/{id}', 'ProductController@update');
+$router->delete('/product/{id}', 'ProductController@destroy');
+
+$router->post('/register', 'UserController@register');
+$router->post('/login', 'UserController@login');
